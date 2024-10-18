@@ -24,17 +24,17 @@ example_user_inputs = {
     'substance_name': 'ethanol',
     # any cas number
     'cas_number': '64-17-5',
-    # any decimal
+    # any decimal - g/mol
     'mol_weight': 46.069,
-    # any decimal
+    # any decimal - DNEL or OEL (mg3/m3)
     'long_term_inhalation': 950,
-    # any decimal
+    # any decimal - DNEL or OEL (mg/kg/day)
     'long_term_dermal': 206,
-    # any decimal
+    # any decimal - DNEL or OEL (mg3/m3)
     'short_term_inhalation': 1900,
-    # any decimal
+    # any decimal - DNEL or OEL (ug/cm2)
     'local_dermal': 10000,
-    # any decimal
+    # any decimal - Pascal
     'vap_pressure_at_operating_temp': 7832.4225,
     # can be PROC1 to PROC25
     'proc': 'PROC7',
@@ -48,7 +48,7 @@ example_user_inputs = {
     # - 'medium'
     # - 'high'
     'fugacity': 'low',
-    # can be: 
+    # can be:
     # - 'outdoors'
     # - 'indoors - no or basic ventilation'
     # - 'indoors - good ventilation'
@@ -88,6 +88,7 @@ example_user_inputs = {
 }
 
 # ------------------------------------------------------------------- #
+
 
 def calc_fugacity_band(dict):
     vap = dict['vap_pressure_at_operating_temp']
@@ -362,7 +363,7 @@ def calc_predicted_rcr_local_dermal(dict):
         prld = 'n/a'
     else:
         prld = dict['predicted_local_dermal_exposure']/dict['local_dermal']
-    dict['predicted_rcr_local_dermal'] = round(prld,4)
+    dict['predicted_rcr_local_dermal'] = round(prld, 4)
     return prld
 
 
@@ -395,9 +396,9 @@ pprint.pprint(dict((k, calculated_dict[k]) for k in (
     'predicted_8hr_dermal_exposure',
     'predicted_8hr_inhalatory_exposure',
     'predicted_RCR_long_term_dermal',
-     'predicted_RCR_long_term_inhalation',
-     'predicted_local_dermal_exposure',
-     'predicted_rcr_local_dermal',
-     'predicted_rcr_short_term_inhalation',
-     'predicted_short_term_inhalatory_exposure'
-                 )))
+    'predicted_RCR_long_term_inhalation',
+    'predicted_local_dermal_exposure',
+    'predicted_rcr_local_dermal',
+    'predicted_rcr_short_term_inhalation',
+    'predicted_short_term_inhalatory_exposure'
+)))
