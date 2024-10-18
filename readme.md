@@ -1,0 +1,3 @@
+- clone with 'git clone https://github.com/rainpatter/test_targeted_risk_calculator.git'
+- pandas, numpy and pprint are required python libraries
+- Instructions on how to run the script are in the calculator.py file
