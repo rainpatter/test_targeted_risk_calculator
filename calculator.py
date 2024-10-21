@@ -26,11 +26,11 @@ example_user_inputs = {
     'cas_number': '64-17-5',
     # any decimal - g/mol
     'mol_weight': 46.069,
-    # any decimal - DNEL or OEL (mg3/m3)
+    # any decimal - DNEL or OEL (mg/m3)
     'long_term_inhalation': 950,
     # any decimal - DNEL or OEL (mg/kg/day)
     'long_term_dermal': 206,
-    # any decimal - DNEL or OEL (mg3/m3)
+    # any decimal - DNEL or OEL (mg/m3)
     'short_term_inhalation': 1900,
     # any decimal - DNEL or OEL (ug/cm2)
     'local_dermal': 10000,
